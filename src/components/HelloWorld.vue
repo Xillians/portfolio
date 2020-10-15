@@ -1,95 +1,54 @@
 <template>
-  <div class="hello">
+  <div class="helloWorld">
     <h1>{{ msg }}</h1>
     <p>
-      For a guide and recipes on how to configure / customize this project,<br />
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener"
-        >vue-cli documentation</a
-      >.
+      Welcome to my portfolio! You can find me on the following locations<br>
+      <a 
+        href="https://github.com/Xillians" 
+        target="_blank" 
+        rel="noopener"
+        >github</a
+      ><br>
+      <a 
+        href="https://twitter.com/xillians" 
+        target="_blank" 
+        rel="noopener"
+        >twitter</a
+      ><br>
+      <a 
+        href="https://www.twitch.tv/xillians" 
+        target="_blank" 
+        rel="noopener"
+        >twitch</a
+      ><br>
     </p>
-    <h3>Installed CLI Plugins</h3>
+    <h3>imgur gallery</h3>
     <ul>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel"
-          target="_blank"
-          rel="noopener"
-          >babel</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-typescript"
-          target="_blank"
-          rel="noopener"
-          >typescript</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint"
-          target="_blank"
-          rel="noopener"
-          >eslint</a
-        >
-      </li>
+      <img class="thumbnail" src="https://i.imgur.com/SGfSfme.jpg" alt="dagger"><br>
+      <a
+        href="https://imgur.com/a/LSnhoHN"
+        target="_blank"
+        rel="noopener"
+        >daedric dagger</a
+      >
     </ul>
-    <h3>Essential Links</h3>
     <ul>
-      <li>
-        <a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a>
-      </li>
-      <li>
-        <a href="https://forum.vuejs.org" target="_blank" rel="noopener"
-          >Forum</a
-        >
-      </li>
-      <li>
-        <a href="https://chat.vuejs.org" target="_blank" rel="noopener"
-          >Community Chat</a
-        >
-      </li>
-      <li>
-        <a href="https://twitter.com/vuejs" target="_blank" rel="noopener"
-          >Twitter</a
-        >
-      </li>
-      <li>
-        <a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a>
-      </li>
+      <img class="thumbnail" src="https://i.imgur.com/XX5xWgb.jpg" alt="dagger"><br>
+      <a
+        href="https://imgur.com/a/PCLLwz6"
+        target="_blank"
+        rel="noopener"
+        >chain chomp</a
+      >
     </ul>
-    <h3>Ecosystem</h3>
     <ul>
-      <li>
-        <a href="https://router.vuejs.org" target="_blank" rel="noopener"
-          >vue-router</a
-        >
-      </li>
-      <li>
-        <a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-devtools#vue-devtools"
-          target="_blank"
-          rel="noopener"
-          >vue-devtools</a
-        >
-      </li>
-      <li>
-        <a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener"
-          >vue-loader</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-          rel="noopener"
-          >awesome-vue</a
-        >
-      </li>
+      <img class="thumbnail" src="https://i.imgur.com/ylVck7d.jpg" alt="dagger"><br>
+      <a
+        href="https://imgur.com/a/EyxGB4d"
+        target="_blank"
+        rel="noopener"
+        >samus aran</a
+      >
     </ul>
   </div>
 </template>
@@ -122,5 +81,9 @@ li {
 }
 a {
   color: #42b983;
+}
+.thumbnail {
+  width: 500px;
+  height: 300px;
 }
 </style>
