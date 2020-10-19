@@ -11,16 +11,19 @@
       >twitter
     </a>
   </div>
-  <HelloWorld msg="Xillians portfolio" />
+  <LandingPage msg="Xillians portfolio" />
+  <Gallery title="galleries"/>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
-import HelloWorld from "./components/HelloWorld.vue";
+import Gallery from "./components/Gallery.vue";
+import LandingPage from "./components/LandingPage.vue";
 
 @Options({
   components: {
-    HelloWorld
+    LandingPage,
+    Gallery
   }
 })
 export default class App extends Vue {}
