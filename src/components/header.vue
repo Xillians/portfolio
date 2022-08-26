@@ -4,16 +4,8 @@
       <a id="navbar title" class="navbar-brand" href="#">Portfolio</a>
       <div class="navbar-collapse" id="">
         <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://www.instagram.com/thexillyone/"
-              >Instagram</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://twitter.com/xillians">Twitter</a>
+          <li class="nav-item" v-for="link in nav_links" :key="link.title">
+            <a class="nav-link" :href="link.href">{{ link.title }}</a>
           </li>
         </ul>
       </div>
@@ -26,12 +18,31 @@ import { Options, Vue } from "vue-class-component";
 
 @Options({
   name: "header",
+  data() {
+    return {
+      nav_links: [
+        {
+          href: "#",
+          title: "Home",
+        },
+        {
+          href: "https://www.instagram.com/thexillyone/",
+          title: "instagram",
+        },
+        {
+          href: "https://twitter.com/xillians",
+          title: "Twitter",
+        },
+      ],
+    };
+  },
   props: {
     msg: String,
   },
 })
-export default class HelloWorld extends Vue {
+export default class HeaderVue extends Vue {
   msg!: string;
+  nav_links: any;
 }
 </script>
 
