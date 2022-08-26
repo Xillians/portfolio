@@ -1,15 +1,14 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+  <header-vue msg="Welcome to Your Vue.js + TypeScript App" />
 </template>
 
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
-import HelloWorld from "./components/HelloWorld.vue";
+import headerVue from "./components/header.vue";
 
 @Options({
   components: {
-    HelloWorld,
+    headerVue,
   },
 })
 export default class App extends Vue {}
@@ -17,7 +16,6 @@ export default class App extends Vue {}
 
 <style lang="scss">
 #app {
-  @import "../public/bootstrap.css";
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
