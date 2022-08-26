@@ -36,12 +36,8 @@ import { Options, Vue } from "vue-class-component";
       ],
     };
   },
-  props: {
-    msg: String,
-  },
 })
 export default class HeaderVue extends Vue {
-  msg!: string;
   nav_links: any;
 }
 </script>
