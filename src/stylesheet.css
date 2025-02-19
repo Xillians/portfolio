@@ -1,0 +1,31 @@
+:root {
+  --font-family: 'Avenir', 'Helvetica', 'Arial', sans-serif;
+  --sapphire: #72B0AB;
+  --arctic: #BCDDDC;
+  --lace: #FFEDD1;
+  --bubblegum: #FDC1B4;
+  --ballet-slipper: #FE9179;
+  --sage: #CFB97E;
+  --pistachio: #B89D47;
+  --spruce: #355e58;
+  --peacock: #053229;
+
+  --text-color: var(--peacock);
+}
+
+main,
+body {
+  background-color: var(--lace);
+  color: var(--peacock);
+}
+
+button {
+  background-color: var(--sapphire);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: var(--peacock);
+  border: none;
+}
+a {
+  color: var(--pistachio);
+}
