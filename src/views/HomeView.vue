@@ -1,18 +1,20 @@
+<script setup lang="ts">
+import { ref, computed } from "vue";
+const { computedMessage } = useHome();
+
+function useHome() {
+  const message = ref("Hello Vue 3 + Vite");
+  const computedMessage = computed(() => message.value + "!");
+  return {
+    message,
+    computedMessage,
+  };
+}
+</script>
+
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+    <h1>{{ computedMessage }}</h1>
   </div>
 </template>
-
-<script lang="ts">
-import { Options, Vue } from "vue-class-component";
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
-
-@Options({
-  components: {
-    HelloWorld,
-  },
-})
-export default class HomeView extends Vue {}
-</script>
