@@ -14,7 +14,6 @@ function useHome() {
 
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
     <h1>{{ computedMessage }}</h1>
   </div>
 </template>
