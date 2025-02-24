@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import circus from "../assets/projects/circus.png";
-import { ref } from "vue";
-const { circusImage } = useImages();
+import kingdom from "../assets/projects/kingdom.png";
+import pathfinder from "../assets/projects/pathfinder.png";
+import gapAnalyzer from "../assets/projects/gap-analyzer.png";
 type Project = {
   name: string;
   description: string;
+  imageSrc: any;
   url: string;
 };
 
@@ -13,33 +15,31 @@ const projectList: Array<Project> = [
     name: "Circus acts",
     description:
       "A website used during tabletop roleplaying games to track the progress and results of the show.",
+    imageSrc: circus,
     url: "https://xillians.github.io/circus-acts/",
   },
   {
     name: "Kingdom Craft",
     description:
       "WiP: The adventure Kingmaker in pathfinder lets you control an expanding kingdom, and this tool helps you keep track of it.",
+    imageSrc: kingdom,
     url: "https://xillians.github.io/kingdom-craft/",
   },
   {
     name: "Pathfinder Style",
     description:
       "For those that wish to use a standardised stylesheet for Pathfinder related applications, this project can help you out.",
+    imageSrc: pathfinder,
     url: "https://xillians.github.io/pathfinder-style/",
   },
   {
     name: "Magic gap analyzer",
     description:
       "A helpful tool to identify what cards you are missing in your collection to complete your new Magic the Gathering deck.",
-    url: "https://xillians.github.io/magic-gap-analyzer/",
+    imageSrc: gapAnalyzer,
+    url: "https://xillians.github.io/what-am-i-missing/",
   },
 ];
-function useImages() {
-  const circusImage = ref(circus);
-  return {
-    circusImage,
-  };
-}
 </script>
 
 <template>
@@ -50,7 +50,7 @@ function useImages() {
     </a>
     <div class="project-details">
       <p>{{ project.description }}</p>
-      <img :src="circusImage" alt="Circus acts" />
+      <img :src="project.imageSrc" alt="Circus acts" />
     </div>
   </div>
 </template>
