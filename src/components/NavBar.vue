@@ -7,7 +7,6 @@
       <router-link to="/">Home</router-link>
       <router-link to="/about">About</router-link>
       <router-link to="/projects">Projects</router-link>
-      <router-link to="/socials">socials</router-link>
     </section>
     <section aria-label="Social media links" style="justify-self: end">
       <a href="https://bsky.app/profile/xillians.bsky.social">
