@@ -17,7 +17,6 @@ main,
 body {
   background-color: var(--lace);
   color: var(--peacock);
-  margin: 0;
 }
 
 button {
