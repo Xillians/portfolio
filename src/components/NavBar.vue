@@ -1,8 +1,16 @@
 <template>
   <header>
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
+    <img
+      src="https://github.com/Xillians/Xillians/raw/main/assets/images/Capture.PNG"
+      alt="Xillians Logo"
+    />
   </header>
 </template>
+
+<style scoped>
+img {
+  width: 100%;
+  height: 10em;
+  object-fit: cover;
+}
+</style>
