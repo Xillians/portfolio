@@ -45,12 +45,13 @@ function useImages() {
 <template>
   <h1>Projects</h1>
   <div class="project-card" v-for="project in projectList" :key="project.name">
-    <h2>{{ project.name }}</h2>
-    <div>
+    <a :href="project.url">
+      <h2>{{ project.name }}</h2>
+    </a>
+    <div class="project-details">
       <p>{{ project.description }}</p>
       <img :src="circusImage" alt="Circus acts" />
     </div>
-    <a :href="project.url">Link to project</a>
   </div>
 </template>
 
@@ -62,14 +63,23 @@ function useImages() {
   text-align: left;
   padding: 1rem;
   margin: 1rem;
+}
+
+.project-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+img {
+  width: 250px;
+  height: auto;
+}
+@media (max-width: 768px) {
   img {
-    width: 250px;
-    height: auto;
-  }
-  div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    width: 135px;
+    height: 100%;
   }
 }
 </style>
