@@ -45,31 +45,32 @@ const projectList: Array<Project> = [
 <template>
   <h1>Projects</h1>
   <div class="project-card" v-for="project in projectList" :key="project.name">
-    <a :href="project.url">
-      <h2>{{ project.name }}</h2>
-    </a>
     <div class="project-details">
+      <a :href="project.url">
+        <h2>{{ project.name }}</h2>
+      </a>
       <p>{{ project.description }}</p>
-      <img :src="project.imageSrc" alt="Circus acts" />
     </div>
+    <img :src="project.imageSrc" alt="Circus acts" />
   </div>
 </template>
 
 <style scoped>
 .project-card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
   text-align: left;
-  padding: 1rem;
-  margin: 1rem;
+  padding: 0.5rem;
+}
+h2 {
+  margin: 0;
 }
 
 .project-details {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  width: 100%;
 }
 
 img {
