@@ -59,6 +59,7 @@ const projectList: Array<Project> = [
 .project-card {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: flex-start;
   text-align: left;
   padding: 0.5rem;
