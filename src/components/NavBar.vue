@@ -67,8 +67,8 @@ function useHamburgerMenu() {
 
 <style scoped>
 header {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
   align-items: center;
 }
 img {
@@ -134,6 +134,11 @@ section[aria-label="Social media links"] {
 }
 
 @media (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
   .hamburger {
     display: block;
   }
