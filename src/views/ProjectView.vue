@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import circus from "../assets/projects/circus.png";
+import { ref } from "vue";
+const { circusImage } = useImages();
 type Project = {
   name: string;
   description: string;
@@ -31,15 +34,26 @@ const projectList: Array<Project> = [
     url: "https://xillians.github.io/magic-gap-analyzer/",
   },
 ];
+function useImages() {
+  const circusImage = ref(circus);
+  return {
+    circusImage,
+  };
+}
 </script>
+
 <template>
   <h1>Projects</h1>
   <div class="project-card" v-for="project in projectList" :key="project.name">
     <h2>{{ project.name }}</h2>
-    <p>{{ project.description }}</p>
+    <div>
+      <p>{{ project.description }}</p>
+      <img :src="circusImage" alt="Circus acts" />
+    </div>
     <a :href="project.url">Link to project</a>
   </div>
 </template>
+
 <style scoped>
 .project-card {
   display: flex;
@@ -48,5 +62,14 @@ const projectList: Array<Project> = [
   text-align: left;
   padding: 1rem;
   margin: 1rem;
+  img {
+    width: 250px;
+    height: auto;
+  }
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 </style>
