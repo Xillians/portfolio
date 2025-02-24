@@ -114,6 +114,13 @@ section[aria-label="Social media links"] {
   width: 25%;
   border-radius: 8px;
   text-align: center;
+  button {
+    font-size: 2rem;
+    background: none;
+    color: var(--sapphire);
+    border: none;
+    cursor: pointer;
+  }
 }
 
 .close {
