@@ -17,8 +17,4 @@ import Navbar from "./components/NavBar.vue";
   text-align: center;
   color: var(--text-color);
 }
-
-nav {
-  padding: 30px;
-}
 </style>
