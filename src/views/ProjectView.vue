@@ -3,6 +3,7 @@ import circus from "../assets/projects/circus.png";
 import kingdom from "../assets/projects/kingdom.png";
 import pathfinder from "../assets/projects/pathfinder.png";
 import gapAnalyzer from "../assets/projects/gap-analyzer.png";
+import paintCollection from "../assets/projects/paint-collection.png";
 type Project = {
   name: string;
   description: string;
@@ -19,6 +20,7 @@ const projectList: Array<Project> = [
       "A website used during tabletop roleplaying games to track the progress and results of the show.",
     imageSrc: circus,
     url: "https://xillians.github.io/circus-acts/",
+    github: "https://github.com/Xillians/circus-acts",
   },
   {
     name: "Kingdom Craft",
@@ -26,6 +28,7 @@ const projectList: Array<Project> = [
       "WiP: The adventure Kingmaker in pathfinder lets you control an expanding kingdom, and this tool helps you keep track of it.",
     imageSrc: kingdom,
     url: "https://xillians.github.io/kingdom-craft/",
+    github: "https://github.com/Xillians/kingdom-craft",
   },
   {
     name: "Pathfinder Style",
@@ -33,6 +36,7 @@ const projectList: Array<Project> = [
       "For those that wish to use a standardised stylesheet for Pathfinder related applications, this project can help you out.",
     imageSrc: pathfinder,
     url: "https://xillians.github.io/pathfinder-style/",
+    github: "https://github.com/Xillians/pathfinder-style",
   },
   {
     name: "Magic gap analyzer",
@@ -40,6 +44,15 @@ const projectList: Array<Project> = [
       "A helpful tool to identify what cards you are missing in your collection to complete your new Magic the Gathering deck.",
     imageSrc: gapAnalyzer,
     url: "https://xillians.github.io/what-am-i-missing/",
+    github: "https://github.com/Xillians/what-am-i-missing",
+  },
+  {
+    name: "Paint collection",
+    description:
+      "An app to log in with google and keep track of your paint collection.",
+    imageSrc: paintCollection,
+    url: "https://paint-collection.fly.dev/",
+    github: "https://github.com/Xillians/paint-collection",
   },
 ];
 </script>
@@ -52,6 +65,7 @@ const projectList: Array<Project> = [
         <h2>{{ project.name }}</h2>
       </a>
       <p>{{ project.description }}</p>
+      <a :href="project.github">Github</a>
     </div>
     <img :src="project.imageSrc" alt="Circus acts" />
   </div>
