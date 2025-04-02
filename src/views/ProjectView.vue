@@ -6,8 +6,10 @@ import gapAnalyzer from "../assets/projects/gap-analyzer.png";
 type Project = {
   name: string;
   description: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   imageSrc: any;
   url: string;
+  github?: string;
 };
 
 const projectList: Array<Project> = [
